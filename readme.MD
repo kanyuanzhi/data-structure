@@ -20,7 +20,7 @@ This js file is a realization of data structure in Javascript. It contains basic
 ```
 
 ### Some functions:
-- `function accountWord(origin)`
+1. `function accountWord(origin)`
 to account the number of each words in a text, and origin is an array after the process of a text which can use "split(' ')". The below codes is an example of communication between js and php:
 ```javascript
 <script>
@@ -48,7 +48,7 @@ to account the number of each words in a text, and origin is an array after the 
 	echo $content;
 ```
 
-- `function nulBase(num, base)`
+2. `function nulBase(num, base)`
 to convert a decimal numbers into a "base(2,4,8...)" number
 
 
