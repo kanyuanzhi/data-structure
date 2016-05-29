@@ -1,7 +1,7 @@
 # data-structure
 
 ### Description 
-This js file is a realization of data structure in Javascript. It contains basic data structures like stack, queue, list, dictionary and some useful methods now. It will be updated continually.
+This js file is a realization of data structure in Javascript. It contains basic data structures like stack, queue, list, dictionary, hashtable and some useful methods now. It will be updated continually.
 
 ### Content
 ##### data structures, usuful methods & functions
@@ -15,6 +15,7 @@ This js file is a realization of data structure in Javascript. It contains basic
 	var q = new Queue();
 	var l = new LList();
 	var d = new Dictionary();
+	var hTable = new HashTable();
 </script>
 ```
 
@@ -37,6 +38,9 @@ to account the number of each words in a text, and origin is an array after the 
 	}
 </script>
 ```
+*Method "split()" has some problems:*
+- *it cannot separate the punctuation from the text.*
+- *if the line doesn't end with "space", it would not recognize the last word in this line and the first word in next line.*
 ```php
 <?php
 	$file = 'C:\wamp\www\phpjquery\amountword.txt';

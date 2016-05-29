@@ -162,8 +162,61 @@ function Dictionary(){
 	}
 }
 
+//散列表数据结构
+function HashTable() { 
+	this.table = new Array(137);
+   
+	this.simpleHash = function(data){ 
+		var total = 0; 
+		for (var i = 0; i < data.length; ++i) { 
+			total += data.charCodeAt(i);
+		}
+		total = total % this.table.length;
+		return parseInt(total);
+	} 
+ 
+   this.betterHash = function(data){ 
+		const H = 37; 
+		var total = 0; 
+		for (var i = 0; i < data.length; ++i){ 
+			total += H * total + data.charCodeAt(i); 
+		}
+		total = total % this.table.length;
+		if (total < 0){
+			total += this.table.length-1; 
+		}
+		return parseInt(total); 
+	}
 
-/*******************************************************************************************************/
+	this.display = function(){ 
+		var n = 0; 
+		var str = "";
+		for (var i = 0; i < this.table.length; ++i) { 
+			if (this.table[i] != undefined) { 
+				str += i + ": " + this.table[i];
+			} 
+		}
+		return str;
+	} 
+
+   this.put = function(data){ 
+		var pos = this.betterHash(data); 
+		this.table[pos] = data; 
+	}
+	
+   //this.get = get; 
+} 
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+/************************************************************************************/
 
 function accountWords(origin){	// 统计每个单词数量，origin为存数单词的数组
 	var process = new Dictionary();
